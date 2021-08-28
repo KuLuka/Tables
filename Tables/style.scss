@@ -1,0 +1,174 @@
+$red:#EA1C24;
+$black:#292929;
+$gray:#4C4C4C;
+$l-gray:#d6d6d6;
+$font:#737373;
+$cat-color:#f0f0f0;
+
+
+@mixin miniTablet-Logo {
+    @media(min-width:600px) and (max-width:700px) {@content;}
+}
+
+@mixin Tablet-Logo {
+    @media(min-width:700px) and (max-width:899px) {@content;}
+}
+
+@mixin Tablet  {
+    @media(min-width:600px)and (max-width:899px) {@content;}
+}
+
+@mixin Desktop1 {
+    @media(min-width:900px) and (max-width:1290px) {@content};
+}
+
+@mixin Desktop2 {
+    @media(min-width:1291px) {@content}
+}
+
+
+.product-page-techincal {
+    padding:1rem;
+    
+
+    @include Tablet() {
+        width:80%;
+        margin:0 auto;
+    }
+
+    @include Desktop1() {
+        width:90%;
+        margin:0 auto;
+    }
+
+    @include Desktop2() {
+        width:100%;
+        margin:0 auto;
+    }
+
+
+    h3 {
+        padding:1rem 0;
+        font-size:1.5rem;
+        font-weight:700;
+        color:$black;
+        text-align: left;
+
+        @include Desktop1() {
+            font-size:1.7rem;
+            text-align:center;
+        }
+
+
+        @include Desktop2() {
+            font-size:1.7rem;
+            text-align:center;
+        }
+    }
+
+
+    h4 {
+        font-size:1.2rem;
+        font-weight:500;
+        color:$black;
+        text-align: left;
+        margin-bottom:.5rem;
+        display:none;
+
+        @include Desktop1() {
+            font-size:1.5rem;
+            text-align:left;
+            letter-spacing:.2rem;
+        }
+
+        @include Desktop2() {
+            font-size:1.5rem;
+            text-align:left;
+            letter-spacing:.1rem;
+        }
+    }
+
+}
+
+.teh-karakteristike-grid {
+
+
+    h5 {
+            font-size:1rem;
+            font-weight:500;
+            padding:.5rem 0;
+            color:$black;
+            text-align: left;
+            color:$black;
+            text-transform:uppercase;
+            margin:0.5rem 0;
+
+        @include Desktop2() {
+            text-align:left;
+        }
+    }
+
+    div {
+        display:grid;
+        grid-template-columns: repeat(2,50%);
+        text-align:center;
+        width:100%;
+        margin:0 auto;
+
+        .para {
+            border:1px solid #cecece;
+            padding:0.5rem 0;
+            color:#24282B;
+            font-size:.85rem;
+        }    
+    }
+}
+
+
+.product-page-special-info {
+    padding:1rem;
+    
+
+    @include Tablet() {
+        width:80%;
+        margin:0 auto;
+    }
+
+    @include Desktop1() {
+        width:90%;
+        margin:0 auto;
+    }
+
+    @include Desktop2() {
+        width:100%;
+        margin:0 auto;
+    }
+
+    h3 {
+            font-size:1rem;
+            font-weight:500;
+            padding:.5rem 0;
+            color:$black;
+            text-align: left;
+            color:$black;
+            text-transform:uppercase;
+    }
+
+    ul {
+        li {
+            padding:.2rem;
+            font-size:.9rem;
+            line-height:20px;
+            color:$font;
+        }
+    }
+
+}
+
+.opis-table {
+    margin:0.5rem 0rem 1rem;
+    color:$font;
+    font-size:.9rem;
+    line-height:20px;
+    
+}
